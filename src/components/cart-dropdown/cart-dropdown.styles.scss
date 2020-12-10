@@ -18,7 +18,8 @@
         height: 240px;
         display: flex;
         flex-direction: column;
-        overflow: hidden;
+        overflow-y: scroll;
+        overflow-x: hidden;
     }
     button {
         margin-top: auto;
