@@ -16,7 +16,6 @@ import CheckoutPage from './pages/checkout/checkout.component';
 import Header from './components/header/header.component';
 import './App.css';
 
-
 class App extends React.Component {
   unsubscribeFromAuth = null;
 
@@ -34,9 +33,7 @@ const {setCurrentUser} = this.props;
             });
         });    
       }
-      else{
         setCurrentUser(userAuth);
-      }
     });
   }
 
