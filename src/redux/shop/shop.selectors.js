@@ -13,13 +13,6 @@ export const selectCollectionsForPreview = createSelector(
   collections => collections ? Object.keys(collections).map(key => collections[key]) : []
 );
 
-/*  export const selectCollection = collectionUrlParam =>
- createSelector(
-    [selectCollections],
-    collections => collections.find(
-        collection => collection.id === COLLECTION_ID_MAP[collectionUrlParam]
-        )
-    ); */
 export const selectCollection = memoize((collectionUrlParam) =>
   createSelector(
     [selectCollections],
@@ -33,5 +26,5 @@ export const selectIsCollectionFetching = createSelector(
 
 export const selectIsCollectionLoaded = createSelector(
   [selectShop],
-  shop => !!shop.collections // !! shorthand for convert to boolean val
+  shop => !!shop.collections
 );
