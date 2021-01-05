@@ -41,7 +41,7 @@ export function* onGoogleSignInStart() {
     yield takeLatest(UserActionTypes.GOOGLE_SIGN_IN_START, signInWithGoogle);
 }
 
-export function* signInWithEmail({payload: { email, password }}) {
+export function* signInWithEmail({ payload: { email, password }}) {
     try{
         const { user } = yield auth.signInWithEmailAndPassword(email, password);
         yield getSnapshotFromUserAuth(user);
@@ -65,7 +65,7 @@ export function* isUserAuthenticated() {
 }
 
 export function* onCheckUserSession() {
-    yield takeLatest(UserActionTypes.CHECK_USER_SESSION,isUserAuthenticated);
+    yield takeLatest(UserActionTypes.CHECK_USER_SESSION, isUserAuthenticated);
 }
 
 export function* signOut() {
@@ -108,6 +108,7 @@ export function* userSagas() {
             call(onEmailSignInStart),
             call(onCheckUserSession),
             call(onSignOutStart),
-            call(onSignUpStart)
+            call(onSignUpStart),
+            call(onSignUpSuccess)
         ]);
 }

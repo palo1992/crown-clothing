@@ -4,9 +4,7 @@ import { firestore, convertCollectionsSnapshotToMap } from '../../firebase/fireb
 
 import { 
     fetchCollectionsSuccess, 
-    fetchCollectionsFailure, 
-    fetchCollectionsStart
-} from './shop.actions';
+    fetchCollectionsFailure} from './shop.actions';
 
 import ShopActionTypes from './shop.types';
 
@@ -21,7 +19,7 @@ export function* fetchCollectionAsync() {
     }
 }
 
-export function* fetchCollectionStart() {
+export function* fetchCollectionsStart() {
     yield takeLatest(
         ShopActionTypes.FETCH_COLLECTIONS_START, 
         fetchCollectionAsync

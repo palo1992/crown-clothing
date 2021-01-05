@@ -4,21 +4,23 @@ import React from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
   //REDUX
 import { connect } from 'react-redux';
-import { selectCurrentUser } from './redux/user/user.selectors';
-import { checkUserSession } from './redux/user/user.actions';
   //RESELECT
 import { createStructuredSelector } from 'reselect';
+  
 
 //COMPONENTS
-  //PAGES
+//PAGES
 import HomePage from './pages/homepage/homepage.component';
 import ShopPage from './pages/shop/shop.component';
 import SignInAndSignUpPage from './pages/sign-in-and-sign-up/sign-in-and-sign-up.component';
 import CheckoutPage from './pages/checkout/checkout.component';
-  //COMPONENTS
+//COMPONENTS
 import Header from './components/header/header.component';
 //STYLES
 import './App.css';
+
+import { selectCurrentUser } from './redux/user/user.selectors';
+import { checkUserSession } from './redux/user/user.actions';
 
 class App extends React.Component {
   unsubscribeFromAuth = null;
