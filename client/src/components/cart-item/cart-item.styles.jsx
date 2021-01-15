@@ -16,5 +16,3 @@ export const ItemDetails = styled.div`
     justify-content: center;
     padding: 10px 20px;
 `;
-//export const DetailsName = styled.span``;
-//export const DetailsPrice = styled.span``;
