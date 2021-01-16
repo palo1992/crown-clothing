@@ -10,6 +10,7 @@ const StripeCheckoutButton = ({ price }) => {
         axios({
             url: 'payment',
             method: 'post',
+            protocol:'https',
             data: {
                 amount: priceForStripe,
                 token
