@@ -33,7 +33,7 @@ export const CollectionItemContainer = styled.div`
 export const ImageContainer = styled.div`
     width: 100%;
     height: 95%;
-    background-image: url(${props=>props.imageUrl});
+    background-image: url(${props => props.imageUrl});
     background-size: cover;
     background-position: center;
     margin-bottom: 5px;

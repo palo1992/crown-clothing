@@ -15,28 +15,28 @@ const INITIAL_STATE = {
         {
             title: 'sneakers',
             imageUrl: 'https://i.ibb.co/0jqHpnp/sneakers.png',
-            id: 3,                    
+            id: 3,
             linkUrl: 'shop/sneakers'
         },
         {
             title: 'womens',
             imageUrl: 'https://i.ibb.co/GCCdy8t/womens.png',
             size: 'large',
-            id: 4,                    
+            id: 4,
             linkUrl: 'shop/womens'
         },
         {
             title: 'mens',
             imageUrl: 'https://i.ibb.co/R70vBrQ/mens.png',
             size: 'large',
-            id: 5,                    
+            id: 5,
             linkUrl: 'shop/mens'
         }
     ]
 };
 
 const directoryReducer = (state = INITIAL_STATE, action) => {
-    switch(action.type){
+    switch (action.type) {
         default:
             return state;
     }

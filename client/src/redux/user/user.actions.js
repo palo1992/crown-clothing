@@ -9,7 +9,7 @@ export const emailSignInStart = (emailAndPassword) => ({
     payload: emailAndPassword
 });
 
-export const  signInSuccess = (user) => ({
+export const signInSuccess = (user) => ({
     type: UserActionTypes.SIGN_IN_SUCCESS,
     payload: user
 });
@@ -21,7 +21,7 @@ export const signInFailure = error => ({
 
 export const checkUserSession = () => ({
     type: UserActionTypes.CHECK_USER_SESSION
-}); 
+});
 
 export const signOutStart = () => ({
     type: UserActionTypes.SIGN_OUT_START

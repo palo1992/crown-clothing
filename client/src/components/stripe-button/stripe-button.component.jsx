@@ -2,11 +2,11 @@ import React from 'react';
 import StripeCheckout from 'react-stripe-checkout';
 import axios from 'axios';
 
-const StripeCheckoutButton = ({price}) => {
+const StripeCheckoutButton = ({ price }) => {
     const priceForStripe = price * 100;
-    const publishableKey= 'pk_test_51HwnywLsKwomMPMZow5nliFjQ98h5iHJmKdtymi8jfZaPpnLfbGAKiMQ8JcZ7s1b3A8leP7gPRMRZO2nCk2nCVvi00TkukNdPI';
-    
-    const onToken = token =>{
+    const publishableKey = 'pk_test_51HwnywLsKwomMPMZow5nliFjQ98h5iHJmKdtymi8jfZaPpnLfbGAKiMQ8JcZ7s1b3A8leP7gPRMRZO2nCk2nCVvi00TkukNdPI';
+
+    const onToken = token => {
         axios({
             url: 'payment',
             method: 'post',
@@ -22,7 +22,7 @@ const StripeCheckoutButton = ({price}) => {
         });
     };
     return (
-        <StripeCheckout 
+        <StripeCheckout
             label='Pay Now'
             name='CROWN Clothin, s.r.o.'
             billingAddress
@@ -33,7 +33,7 @@ const StripeCheckoutButton = ({price}) => {
             panelLabel='Pay Now'
             token={onToken}
             stripeKey={publishableKey}
-            currency='eur'
+            currency='EUR'
         />
     );
 }

@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
- 
+
 const buttonStyles = css`
   background-color: black;
   color: white;
@@ -22,7 +22,7 @@ const invertedButtonStyles = css`
     color: white;
   }
 `;
- 
+
 const googleSignInStyles = css`
   background-color: #4285f4;
   color: white;
@@ -31,7 +31,7 @@ const googleSignInStyles = css`
     background-color: #357ae8;
   }
 `;
- 
+
 const shopButtonStyles = css`
   width: 80%;
   opacity: 0.7;
@@ -46,19 +46,19 @@ const shopButtonStyles = css`
     padding: 0 10px 0 10px;
   }
 `;
- 
+
 const getButtonStyles = (props) => {
   if (props.isGoogleSignIn) {
     return googleSignInStyles;
   }
- 
+
   if (props.shopButton) {
     return { shopButtonStyles, invertedButtonStyles };
   }
- 
+
   return props.inverted ? invertedButtonStyles : buttonStyles;
 };
- 
+
 export const CustomButtonContainer = styled.button`
   min-width: 165px;
   width: auto;
@@ -76,4 +76,3 @@ export const CustomButtonContainer = styled.button`
  
   ${getButtonStyles}
 `;
- 
