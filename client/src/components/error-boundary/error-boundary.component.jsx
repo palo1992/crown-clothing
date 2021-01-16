@@ -24,7 +24,7 @@ class ErrorBoundary extends React.Component {
         if (this.state.hasErrored) {
             return (
                 <ErrorImageOverlay>
-                    <ErrorImageContainer imageUrl="../../assets/ErrorPicture.png" />
+                    <ErrorImageContainer />
                     <ErrorImageText>
                         Ooops. The Page was fell off!
                     </ErrorImageText>
